@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 playlists
+	if (plists)
+		ul 
+			each p in plists
+				li= p.name
+	if (! plists)
+		p No playlist info

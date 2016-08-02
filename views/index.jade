@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	if (! auth)
+		h1 login with spotify
+		form(name="spotify-auth", action="/auth", method="get")
+			input.btn.btn-success(type="submit" value="Link your Spotify")
+	if (auth)
+		h1 #[a(href="/plist") Your playlists]
